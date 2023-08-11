@@ -8,6 +8,7 @@ import CartNav from "../../pages/SideNavs/CartNav";
 import CheckoutNav from "../../pages/SideNavs/CheckoutNav";
 import { Routes } from "../../types/navTypes";
 import UnIdentifiedNav from "../../pages/SideNavs/UnIdentifiedNav";
+import FinalizedCheckoutNav from "../../pages/SideNavs/FinalizedCheckout";
 
 const getComponent = (route: Routes) => {
   switch (route.name) {
@@ -19,6 +20,8 @@ const getComponent = (route: Routes) => {
       return <CartNav />;
     case "Checkout":
       return <CheckoutNav />;
+    case "Finalize":
+      return <FinalizedCheckoutNav />;
     default:
       return <UnIdentifiedNav />;
   }

@@ -16,17 +16,17 @@ const QuantityButton = ({ product, className }: QuantityButtonProps) => {
   const dispatch = useAppDispatch();
   return (
     <div
-      className={`bg-gray-900 py-3 px-6 text-sm shadow-lg text-white flex items-center ${className}`}
+      className={`bg-gray-900 py-3 text-sm shadow-lg text-white flex items-center ${className}`}
     >
       <button
-        className="border-none"
+        className="border-none flex justify-start"
         onClick={() => dispatch(decreaseQuantity(product))}
       >
         {quantity! > 1 ? <FaMinus /> : <FaRegTrashAlt />}
       </button>
       <p className="flex-grow text-center">{quantity}</p>
       <button
-        className="border-none"
+        className="border-none flex justify-end"
         onClick={() => dispatch(increaseQuantity(product))}
       >
         <FaPlus />

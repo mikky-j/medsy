@@ -11,7 +11,7 @@ const Header = () => {
     <header className="w-full bg-white z-40 flex items-center sticky top-0 py-6 px-8 shadow-md">
       <div className="me-4 lg:me-12 flex items-center">
         <RxHamburgerMenu
-          className="mr-4 hover:cursor-pointer"
+          className="lg:mr-4 mr-0 hover:cursor-pointer"
           size={25}
           onClick={() => {
             openRoute("Home");

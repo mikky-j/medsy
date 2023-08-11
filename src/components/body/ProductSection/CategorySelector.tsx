@@ -1,6 +1,7 @@
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
+import { useEffect, useState } from "react";
 
 interface Category {
   name: string;
@@ -9,7 +10,7 @@ interface Category {
 
 interface CategorySelectorProps {
   categories?: Category[];
-  onChange?: (category: Category) => void;
+  onChange?: (category: Category | null) => void;
   activeCategory?: Category;
 }
 
@@ -69,6 +70,10 @@ const CategorySelector = ({
   onChange,
   activeCategory: _activeCategory,
 }: CategorySelectorProps) => {
+  const [active, setActive] = useState<Category | null>(null);
+  useEffect(() => {
+    onChange && onChange(active);
+  }, [active]);
   return (
     <div>
       <Swiper
@@ -91,12 +96,17 @@ const CategorySelector = ({
         }}
         spaceBetween={10}
         slidesPerView={6}
+        slideToClickedSlide
+        centeredSlides
+        centeredSlidesBounds
       >
         {categories.map((category) => (
           <SwiperSlide className="px-3" key={category.name}>
             <div
-              className="h-[200px] hover:cursor-pointer border rounded-md bg-white w-full flex flex-col justify-center items-center"
-              onClick={() => onChange && onChange(category)}
+              className={`h-[200px] hover:cursor-pointer border rounded-md bg-white w-full flex flex-col justify-center items-center ${
+                active === category ? "border-black" : "border-gray-200"
+              }`}
+              onClick={() => setActive(active !== category ? category : null)}
             >
               <img src={category.image} height={100} alt="" />
               <p className="font-semibold mt-3">{category.name}</p>

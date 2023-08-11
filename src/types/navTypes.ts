@@ -5,6 +5,7 @@ type NavRoute = {
   Product: { product: Product };
   Cart: undefined;
   Checkout: undefined;
+  Finalize: undefined;
 };
 
 export type Routes = {

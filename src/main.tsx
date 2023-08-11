@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./pages/Index.tsx";
 import "./index.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-const router = createBrowserRouter([{ path: "/", element: <App /> }]);
+// const router = createBrowserRouter([
+//   { path: "/medsy/", element: <App />, errorElement: <div>404</div> },
+// ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
+    <App />
   </React.StrictMode>
 );

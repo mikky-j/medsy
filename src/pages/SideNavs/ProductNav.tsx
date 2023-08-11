@@ -21,9 +21,9 @@ const ProductNav = ({ product }: ProductNavProps) => {
       cart.products.find((prod) => prod.product.id === product.id)?.quantity
   );
   return (
-    <div className="relative flex flex-col h-full px-6">
+    <div className="relative flex flex-col h-full ">
       <NavHeader title="Details" onBack={closeNav} />
-      <NavBody className="grid gap-y-5 text-gray-800">
+      <NavBody className="grid gap-y-5 px-0 mx-6 text-gray-800">
         <div className="image-area mb-4 py-8 rounded-md flex justify-center bg-slate-100">
           <img
             src={product.image}
@@ -53,7 +53,7 @@ const ProductNav = ({ product }: ProductNavProps) => {
       </NavBody>
       <NavFooter>
         {cartQuantity ? (
-          <QuantityButton product={product} />
+          <QuantityButton className="px-6" product={product} />
         ) : (
           <AddToCartButton
             onClick={() => {

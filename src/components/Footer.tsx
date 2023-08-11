@@ -10,8 +10,8 @@ import {
 const Footer = () => {
   return (
     <footer className="shadow-inner ">
-      <div className="w-full h-full flex justify-between items-center py-6 px-8">
-        <p className="text-sm">
+      <div className="w-full h-full flex md:flex-row flex-col justify-between items-center py-6 px-8">
+        <p className="text-sm mb-4 md:mb-0">
           Copyright &copy; 2023 <span className="font-bold">Medsy, inc</span>{" "}
           All Rights Reserved.
         </p>

@@ -22,7 +22,7 @@ const CartItem = ({ product: { product, quantity } }: CartItemProps) => {
           Unit Price: ₦{product.price}
         </p>
         <QuantityButton
-          className="w-1/2 py-2 px-3 text-xs font-semibold"
+          className="w-1/2 py-2 px-2 text-xs font-semibold"
           product={product}
         />
       </div>

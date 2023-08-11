@@ -7,7 +7,7 @@ interface NavBodyProps {
 
 const NavBody = ({ className = "", children }: NavBodyProps) => {
   return (
-    <div className={`nav-body flex-grow overflow-y-auto ${className}`}>
+    <div className={`nav-body px-6 flex-grow overflow-y-auto ${className}`}>
       {children}
     </div>
   );
