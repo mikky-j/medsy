@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.border-black-important {
+  border-color: black !important;
+}
+
+.overflow-hide {
+  overflow: hidden !important;
+}
+
+.nav-body {
+  scrollbar-color: #111827 #ccc;
+  scrollbar-width: thin;
+}
+
+.nav-body::-webkit-scrollbar {
+  width: 2px;
+  background-color: #ccc;
+}
+
+.nav-body::-webkit-scrollbar-thumb {
+  width: 2px;
+  background-color: #111827;
+  /* display: block; */
+}
+/* .nav-container::-moz-scrollbar {
+  width: 8px;
+  background-color: red;
+} */
